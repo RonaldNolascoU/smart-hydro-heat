@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "40671778-6494-49a7-9385-b5eef5d2004d"
+      }
+    },
+    "owner": "ronuz"
   }
 }
