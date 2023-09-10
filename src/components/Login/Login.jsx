@@ -1,7 +1,8 @@
 import { StyleSheet, View } from 'react-native';
 import { PaperProvider, Text,TextInput,Button,Menu,OpenURLButton } from "react-native-paper";
+import { Style } from './Login.styles';
 
-const Login = () => {
+export default function Login (){
     return (
         <>
             <Text  variant="displayMedium">Sign in to your account</Text>
@@ -12,29 +13,3 @@ const Login = () => {
         </>
     )
 }
-
-
-export default Login;
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    title:{
-        top:'100%'
-    },
-    textbox:{
-        width:'90%',
-        marginTop:'3%'
-    },
-    button:{
-        marginTop: '10%',
-        width:'85%'
-    },
-    text:{
-        marginTop:'5%',
-        textAlign:'left'
-    }
-  });
