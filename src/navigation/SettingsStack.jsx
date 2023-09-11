@@ -8,11 +8,16 @@ const Stack = createNativeStackNavigator();
 
 export function SettingsStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "#687089" },
+      }}
+    >
       <Stack.Screen
         name={screen.settings.settings} //Es el nombre que se va a usar para navegar
         component={SettingsScreen} //Es el componente que se va a renderizar
-        options={{ title: "Configuraciones" }} //Es el nombre que aparece en el header
+        options={{ title: "Configuraciones", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );

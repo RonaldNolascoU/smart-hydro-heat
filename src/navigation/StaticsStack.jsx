@@ -7,11 +7,16 @@ const Stack = createNativeStackNavigator();
 
 export function StaticsStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "#687089" },
+      }}
+    >
       <Stack.Screen
         name={screen.statics.statics} //Es el nombre que se va a usar para navegar
         component={StaticsScreen} //Es el componente que se va a renderizar
-        options={{ title: "Estadisticas" }} //Es el nombre que aparece en el header
+        options={{ title: "Estadisticas", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );

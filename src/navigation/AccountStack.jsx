@@ -7,11 +7,16 @@ const Stack = createNativeStackNavigator();
 
 export function AccountStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "#687089" },
+      }}
+    >
       <Stack.Screen
         name={screen.account.account} //Es el nombre que se va a usar para navegar
         component={AccountScreen} //Es el componente que se va a renderizar
-        options={{ title: "Cuenta" }} //Es el nombre que aparece en el header
+        options={{ title: "Cuenta", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );

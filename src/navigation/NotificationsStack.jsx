@@ -9,11 +9,16 @@ const Stack = createNativeStackNavigator();
 
 export function NotificationsStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "#687089" },
+      }}
+    >
       <Stack.Screen
         name={screen.notifications.notifications}
         component={NotificationsScreen}
-        options={{ title: "Notificaciones" }}
+        options={{ title: "Notificaciones", headerTitleAlign: "center" }}
       />
     </Stack.Navigator>
   );
