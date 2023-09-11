@@ -1,1 +1,1 @@
-export * from "./screenName";
+export { iconScreenOptions } from "./screenOptions";
