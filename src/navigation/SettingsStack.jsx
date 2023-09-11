@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { screen } from "../utils";
+import { screen } from "../constant/screenName";
 import { StaticsScreen } from "../screens/StaticsScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
 
