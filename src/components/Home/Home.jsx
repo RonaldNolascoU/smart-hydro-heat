@@ -3,12 +3,17 @@ import { View } from "react-native";
 import { Card, Text, Button, DataTable, Avatar } from 'react-native-paper';
 import { styles } from "./Home.styles";
 
+const bannerImage = require('../../../assets/images/banner-home1.png');
+
+function LeftContent() {
+    return <Avatar.Icon  size={22} icon="lightbulb-on-outline" />
+}
+
 export function Home() {
-    const LeftContent = () => <Avatar.Icon  size={22} icon="lightbulb-on-outline" />
     return (
         <View>
             <Card style={styles.cardContainer}>
-                <Card.Cover style={styles.cardImage} source={require('../../../assets/images/banner-home1.png')} />
+                <Card.Cover style={styles.cardImage} source={bannerImage} />
                 <Card.Content>
                     <Text variant="bodyMedium">State</Text>
                     <DataTable>
