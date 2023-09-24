@@ -5,14 +5,14 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         padding: 5,
-        //backgroundColor: 'red'
-        //alignItems: 'center',
+        // backgroundColor: 'red'
+        // alignItems: 'center',
     },
     contenedorInputs: {
         flex: 3,
         padding: 3,
         alignItems: 'center',
-        //backgroundColor: 'purple'
+        // backgroundColor: 'purple'
     },
     contenedorIcon: {
         width: 30,

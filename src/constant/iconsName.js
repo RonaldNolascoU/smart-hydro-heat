@@ -1,6 +1,6 @@
 import { screen } from "./screenName";
 
-//Nombres de los iconos de la libreria react-native-vector-icons para el menu de navegacion
+// Nombres de los iconos de la libreria react-native-vector-icons para el menu de navegacion
 export const iconsName = {
   [screen.alarms.tab]: "alarm",
   [screen.home.tab]: "home",

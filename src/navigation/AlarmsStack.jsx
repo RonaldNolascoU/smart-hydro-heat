@@ -14,9 +14,9 @@ export function AlarmsStack() {
       }}
     >
       <Stack.Screen
-        name={screen.alarms.alarms} //Es el nombre que se va a usar para navegar
-        component={AlarmsScreen} //Es el componente que se va a renderizar
-        options={{ title: "Programar", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+        name={screen.alarms.alarms} // Es el nombre que se va a usar para navegar
+        component={AlarmsScreen} // Es el componente que se va a renderizar
+        options={{ title: "Programar", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );

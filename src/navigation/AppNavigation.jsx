@@ -6,7 +6,7 @@ import { AccountStack } from "./AccountStack";
 import { screen } from "../constant/screenName";
 
 const Tab = createBottomTabNavigator();
-//Barra de navegacion inferior
+// Barra de navegacion inferior
 export function AppNavigation() {
   const inicioSesion = true;
 
@@ -27,12 +27,12 @@ export function AppNavigation() {
         />
       ) : (
         <>
-          {tabScreen.map((screen, index) => (
+          {tabScreen.map((scr, index) => (
             <Tab.Screen
-              key={index}
-              name={screen.name}
-              component={screen.component}
-              options={screen.options}
+              key={`tab-${index}`}
+              name={scr.name}
+              component={scr.component}
+              options={scr.options}
             />
           ))}
         </>

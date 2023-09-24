@@ -14,9 +14,9 @@ export function AccountStack() {
       }}
     >
       <Stack.Screen
-        name={screen.account.account} //Es el nombre que se va a usar para navegar
-        component={AccountScreen} //Es el componente que se va a renderizar
-        options={{ title: "Cuenta", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+        name={screen.account.account} // Es el nombre que se va a usar para navegar
+        component={AccountScreen} // Es el componente que se va a renderizar
+        options={{ title: "Cuenta", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );

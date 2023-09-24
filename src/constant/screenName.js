@@ -1,6 +1,6 @@
 const homeStack = {
   tab: "HomeTab",
-  home: "Home", //nombre para regresar a la pantalla
+  home: "Home", // nombre para regresar a la pantalla
 };
 const staticsStack = {
   tab: "StaticsTab",
