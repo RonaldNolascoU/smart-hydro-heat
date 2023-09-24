@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import { Text, TextInput, Button, IconButton } from "react-native-paper";
+import { TextInput, Button, IconButton } from "react-native-paper";
 import { styles } from './SettingsChangePassword.styles';
 
 export function SettingsChangePassword() {
-    //Estados para mostrar la contraseña que escriba el usurio
+    // Estados para mostrar la contraseña que escriba el usurio
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isRepeatPasswordVisible, setIsRepeatPasswordVisible] = useState(false)
 
-    //Función para habilitar la visibilidad del input de Nueva Contraseña
+    // Función para habilitar la visibilidad del input de Nueva Contraseña
     const togglePasswordVisibility = () => {
         setIsPasswordVisible(!isPasswordVisible);
     };
-    //Función para habilitar la visibilidad del input de Repetir Nueva Contraseña
+    // Función para habilitar la visibilidad del input de Repetir Nueva Contraseña
     const toggleRepeatPasswordVisibility = () => {
         setIsRepeatPasswordVisible(!isRepeatPasswordVisible);
     };

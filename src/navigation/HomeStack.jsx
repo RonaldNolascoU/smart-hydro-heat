@@ -15,12 +15,12 @@ export function HomeStack() {
       }}
     >
       <Stack.Screen
-        name={screen.home.home} //Es el nombre que se va a usar para navegar
-        component={HomeScreen} //Es el componente que se va a renderizar
+        name={screen.home.home} // Es el nombre que se va a usar para navegar
+        component={HomeScreen} // Es el componente que se va a renderizar
         options={{
           title: "Inicio",
           headerTitleAlign: "center",
-        }} //Es el nombre que aparece en el header
+        }} // Es el nombre que aparece en el header
       />
       <Stack.Screen
         name={screen.home.temperature}
