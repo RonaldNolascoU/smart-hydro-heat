@@ -14,9 +14,9 @@ export function StaticsStack() {
       }}
     >
       <Stack.Screen
-        name={screen.statics.statics} //Es el nombre que se va a usar para navegar
-        component={StaticsScreen} //Es el componente que se va a renderizar
-        options={{ title: "Estadisticas", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+        name={screen.statics.statics} // Es el nombre que se va a usar para navegar
+        component={StaticsScreen} // Es el componente que se va a renderizar
+        options={{ title: "Estadisticas", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
       />
     </Stack.Navigator>
   );
