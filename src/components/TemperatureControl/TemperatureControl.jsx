@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
 import { Text, Card, IconButton, Button } from "react-native-paper";
-import { styles } from "./Alarm.styles";
+import { styles } from "./TemperatureControl.styles";
 
-export function Alarm() {
+export function TemperatureControl() {
   return (
     <View>
       <View style={styles.content}>

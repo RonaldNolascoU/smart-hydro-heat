@@ -41,10 +41,9 @@ export const styles = StyleSheet.create({
     fontSize: 64,
     fontWeight: "bold",
   },
-
-  /* btnContentActions: {
+  btnContentActions: {
     position: "absolute",
     width: "100%",
     bottom: 60,
-  }, */
+  },
 });

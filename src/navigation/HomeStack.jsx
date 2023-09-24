@@ -2,6 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeScreen } from "../screens/HomeScreen";
 import { screen } from "../constant/screenName.js";
+import { TemperatureControlScreen } from "../screens/TemperatureControlScreen/TemperatureControlScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,14 @@ export function HomeStack() {
           title: "Inicio",
           headerTitleAlign: "center",
         }} //Es el nombre que aparece en el header
+      />
+      <Stack.Screen
+        name={screen.home.temperature}
+        component={TemperatureControlScreen}
+        options={{
+          title: "Control de Temperatura",
+          headerTitleAlign: "center",
+        }}
       />
     </Stack.Navigator>
   );
