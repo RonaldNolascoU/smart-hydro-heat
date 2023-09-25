@@ -36,5 +36,7 @@
         "react/no-array-index-key": "warn",
 
         "react/style-prop-object": "off",
+
+        "import/no-extraneous-dependencies": "off"
     }
 }
