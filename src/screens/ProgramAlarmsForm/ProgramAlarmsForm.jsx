@@ -7,6 +7,9 @@ import { Button, Card, Text, DataTable, IconButton, TextInput } from 'react-nati
 import { styles } from "./ProgramAlarmsForm.styles";
 
 export function ProgramAlarmsForm() {
+
+    //Es posible utilizar un timePicker pero se instala como paquete aparte, por motivos de diseño
+    //los represento como 2 campos numéricos
     return (
         <View>
 

@@ -1,14 +1,17 @@
 import React from 'react'
 import { testAlarms } from '../../constant/testAlarms';
-import { ProgramAlarmsForm } from './ProgramAlarmsForm';
 import { View, ScrollView } from "react-native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
+import { screen } from "../../constant/screenName";
 import { Button, Card, Text, DataTable, IconButton } from 'react-native-paper';
-import { styles } from "./ProgramAlarms.styles";
+import { styles } from "./Alarms.styles";
 
-export function ProgramAlarms() {
-    
+export function Alarms() {
+    const navigation = useNavigation();
+
+    const goToProgramAlarmsForm = () => {
+        navigation.navigate(screen.alarms.programAlarms);
+      };
     return (
         <>
             <View style={styles.container}>
@@ -31,7 +34,9 @@ export function ProgramAlarms() {
                         icon="alarm-plus"
                         size={50}
                         style={styles.bottomButton}
-                        onPress={() => {console.log("Redireccion a ProgramAlarmsForm.jsx")}}
+                        onPress={() => {
+                            goToProgramAlarmsForm();
+                        }}
                     />
                 </ScrollView>
             </View>
