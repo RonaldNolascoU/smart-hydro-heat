@@ -12,6 +12,10 @@ export function Register() {
           navigation.navigate(screen.home.home);
      };
 
+     const goToLogin = () => {
+          navigation.navigate(screen.account.login);
+     }
+
      return (
           <>
                <View style={styles.container}>
@@ -46,7 +50,10 @@ export function Register() {
                     >
                          Sign up
                     </Button>
-                    <Text style={styles.text}>Already have an account? Sign in</Text>
+                    <View style={styles.linkContainer}>
+                         <Text style={styles.text}>Already have an account?</Text>
+                         <Button onPress={goToLogin} style={styles.linkBtn}>Sign in</Button>
+                    </View>
                </View>
           </>
      );

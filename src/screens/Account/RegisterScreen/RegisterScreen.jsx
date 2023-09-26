@@ -1,6 +1,6 @@
 import React from "react";
 import { Register } from "../../../components/Register/Register";
 
-export function LoginScreen() {
+export function RegisterScreen() {
   return <Register />;
 }
