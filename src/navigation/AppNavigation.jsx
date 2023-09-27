@@ -1,29 +1,31 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { tabScreen } from "../constant/tabScreen";
-import { iconScreenOptions } from "../utils";
-import { AccountStack } from "./AccountStack";
-import { screen } from "../constant/screenName";
+import React, { useEffect } from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useDispatch, useSelector } from 'react-redux';
+import { tabScreen } from '../constant/tabScreen';
+import { iconScreenOptions } from '../utils';
+import { AccountStack } from './AccountStack';
+import { screen } from '../constant/screenName';
+import { saveLoggedin } from '../store/generalReducer';
 
 const Tab = createBottomTabNavigator();
 // Barra de navegacion inferior
 export function AppNavigation() {
-  const inicioSesion = false;
+  const { loggedin } = useSelector(({ state }) => state);
 
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarInactiveTintColor: "gray",
-        tabBarActiveTintColor: "#68708a",
+        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: '#68708a',
         tabBarIcon: ({ color, size }) => iconScreenOptions(route, color, size),
       })}
     >
-      {inicioSesion ? (
+      {!loggedin ? (
         <Tab.Screen
           name={screen.account.tab}
           component={AccountStack}
-          options={{ title: "Cuenta" }}
+          options={{ title: 'Cuenta' }}
         />
       ) : (
         <>
