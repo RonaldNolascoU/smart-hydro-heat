@@ -11,6 +11,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginVertical:'20%',
+    textAlign:'center',
+    fontSize: 50
   },
   cardContainer: {
     width: '100%',
