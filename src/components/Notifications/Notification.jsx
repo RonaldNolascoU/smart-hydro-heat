@@ -1,10 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./Notification.styles";
-import notificationExample from "./notificationTest"
+import notifications from "./notificationTest"
 
 export function Notifications() {
-    const [notifications, setNotifications] = useState(notificationExample);
     return (
         <View>
             {notifications.map((notification, i) =>
