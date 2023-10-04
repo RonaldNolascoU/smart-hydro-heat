@@ -1,4 +1,4 @@
-export const testNotifications = [
+const testNotifications = [
     {
          date: new Date(2023, 0, 17),
          hour: "8:00 PM",
@@ -23,4 +23,6 @@ export const testNotifications = [
          title: "Heather on",
          description: "Activated manually on 30°C",
     },
-]
+];
+
+export default testNotifications;

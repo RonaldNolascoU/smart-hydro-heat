@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import { styles } from "./Notification.styles";
 import notifications from "./notificationTest"
 
 export function Notifications() {
     return (
-        <View>
+        <ScrollView>
             {notifications.map((notification, i) =>
                 <View key={`notification-${i}`}>
                     <View style={styles.notificationDateContainer}>
@@ -22,6 +22,6 @@ export function Notifications() {
                     </View>
 
                 </View>)}
-        </View>
+        </ScrollView>
     );
 }
