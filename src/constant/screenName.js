@@ -10,6 +10,7 @@ const staticsStack = {
 const alarmsStack = {
   tab: "AlarmsTab",
   alarms: "Alarms",
+  programAlarms: "ProgramAlarms",
 };
 const notificationsStack = {
   tab: "NotificationsTab",

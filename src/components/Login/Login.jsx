@@ -11,7 +11,7 @@ import { styles } from "./Login.styles";
 import { screen } from "../../constant/screenName";
 
 export function Login() {
-  const navigation = useNavigation();
+     const navigation = useNavigation();
 
   const signIn = async () => {
     try {
@@ -38,6 +38,10 @@ export function Login() {
   const goToHome = () => {
     navigation.navigate(screen.home.home);
   };
+
+  const goToRegister = () => {
+    navigation.navigate(screen.account.register);
+  }
 
   return (
     <View style={styles.container}>
@@ -67,7 +71,10 @@ export function Login() {
           color={GoogleSigninButton.Color.Dark}
           onPress={signIn} 
         />
-        <Text style={styles.text}>Don't you have an account yet? Sign in</Text>
+          <View style={styles.linkContainer}>
+            <Text style={styles.text}>Don&apos;t you have an account yet?</Text>
+            <Button onPress={goToRegister} style={styles.linkBtn}>Sign up</Button>
+          </View>
       </View>
   );
 }

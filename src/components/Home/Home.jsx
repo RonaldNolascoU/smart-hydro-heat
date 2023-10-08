@@ -1,17 +1,16 @@
-import React from "react";
-import { View, ScrollView } from "react-native";
-import { Card, Text, Button, DataTable, Avatar } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
-import { styles } from "./Home.styles";
-import { screen } from "../../constant/screenName";
+import React from 'react';
+import { View, ScrollView } from 'react-native';
+import { Card, Text, Button, DataTable, Avatar } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { styles } from './Home.styles';
+import { screen } from '../../constant/screenName';
 
 const bannerImage = require('../../../assets/images/banner-home1.png');
 
 function LeftContent() {
-    return <Avatar.Icon  size={22} icon="lightbulb-on-outline" />
+  return <Avatar.Icon size={22} icon="lightbulb-on-outline" />;
 }
 export function Home() {
-
   const navigation = useNavigation();
 
   const goToTemperatureControl = () => {

@@ -8,7 +8,7 @@ import { screen } from "../constant/screenName";
 const Tab = createBottomTabNavigator();
 // Barra de navegacion inferior
 export function AppNavigation() {
-  const inicioSesion = true;
+  const inicioSesion = false;
 
   return (
     <Tab.Navigator
