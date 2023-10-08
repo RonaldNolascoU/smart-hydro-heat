@@ -20,6 +20,7 @@ export function Login() {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log({userInfo})
+      goToHome();
       // setState({ userInfo });
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -60,6 +61,12 @@ export function Login() {
         >
           Sign in
         </Button>
+        <Text>or</Text>
+        <GoogleSigninButton
+          style={styles.googleButton}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={signIn} 
+        />
         <Text style={styles.text}>Don't you have an account yet? Sign in</Text>
       </View>
   );

@@ -16,10 +16,15 @@ export const styles = StyleSheet.create({
     },
     button:{
         marginTop: '10%',
+        marginBottom:'2%',
         width:'85%'
     },
     text:{
         marginTop:'5%',
         textAlign:'left'
-    }
+    },
+    googleButton:{
+        marginTop:'2%',
+        width:'85%',
+    },
   })
