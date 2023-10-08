@@ -1,15 +1,20 @@
-import React from "react";
-import { View } from "react-native";
-import { Text, TextInput, Button } from "react-native-paper";
-import { styles } from "./Login.styles";
-import { useNavigation } from "@react-navigation/native";
-import { screen } from "../../constant/screenName";
+import React, { useEffect } from 'react';
+import { View } from 'react-native';
+import { Text, TextInput, Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { useDispatch, useSelector } from 'react-redux';
+import { styles } from './Login.styles';
+import { screen } from '../../constant/screenName';
+import { saveLoggedin } from '../../store/generalReducer';
 
 export function Login() {
      const navigation = useNavigation();
+     const dispatch = useDispatch();
+     const { loggedin } = useSelector(({ state }) => state);
 
      const goToHome = () => {
-          navigation.navigate(screen.home.home);
+          dispatch(saveLoggedin(true));
+//           navigation.navigate(screen.home.home);
      };
 
      const goToRegister = () => {
