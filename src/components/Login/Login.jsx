@@ -8,9 +8,11 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 import { useDispatch, useSelector } from 'react-redux';
+import Toast from 'react-native-toast-message';
 import { styles } from "./Login.styles";
 import { screen } from "../../constant/screenName";
 import { saveLoggedin } from '../../store/generalReducer';
+
 
 export function Login() {
      const navigation = useNavigation();
@@ -24,6 +26,11 @@ export function Login() {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log({userInfo})
+      const { user: { name = "" } = {} } = userInfo || {};
+      Toast.show({
+        type: 'success',
+        text1: `Welcome ${name}`,
+      })
       goToHome();
       // setState({ userInfo });
     } catch (error) {
@@ -41,7 +48,7 @@ export function Login() {
 
   const goToHome = () => {
     dispatch(saveLoggedin(true));
-    navigation.navigate(screen.home.home, { screen: screen.home.home });
+    navigation.navigate(screen.home.tab, { screen: screen.home.home });
   };
 
   const goToRegister = () => {
@@ -74,6 +81,7 @@ export function Login() {
         <GoogleSigninButton
           style={styles.googleButton}
           color={GoogleSigninButton.Color.Dark}
+          size={GoogleSigninButton.Size.Wide}
           onPress={signIn} 
         />
           <View style={styles.linkContainer}>
