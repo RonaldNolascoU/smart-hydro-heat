@@ -7,11 +7,15 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
+import { useDispatch, useSelector } from 'react-redux';
 import { styles } from "./Login.styles";
 import { screen } from "../../constant/screenName";
+import { saveLoggedin } from '../../store/generalReducer';
 
 export function Login() {
      const navigation = useNavigation();
+     const dispatch = useDispatch();
+     const { loggedin } = useSelector(({ state }) => state);
 
   const signIn = async () => {
     try {
@@ -36,6 +40,7 @@ export function Login() {
   };
 
   const goToHome = () => {
+    dispatch(saveLoggedin(true));
     navigation.navigate(screen.home.home, { screen: screen.home.home });
   };
 
