@@ -8,31 +8,47 @@ import { screen } from '../../constant/screenName';
 import { saveLoggedin } from '../../store/generalReducer';
 
 export function Login() {
-  const navigation = useNavigation();
-  const dispatch = useDispatch();
-  const { loggedin } = useSelector(({ state }) => state);
+     const navigation = useNavigation();
+     const dispatch = useDispatch();
+     const { loggedin } = useSelector(({ state }) => state);
 
-  const goToHome = () => {
-    dispatch(saveLoggedin(true));
+     const goToHome = () => {
+          dispatch(saveLoggedin(true));
+//           navigation.navigate(screen.home.home);
+     };
 
-    // navigation.navigate(screen.home.home);
-  };
+     const goToRegister = () => {
+          navigation.navigate(screen.account.register);
+     }
 
-  return (
-    <View style={styles.container}>
-      <Text variant="displayMedium">Sign in to your account</Text>
-      <TextInput style={styles.textbox} mode="flat" placeholder="Email*" />
-      <TextInput style={styles.textbox} placeholder="Password*" secureTextEntry />
-      <Button
-        style={styles.button}
-        mode="contained"
-        onPress={() => {
-          goToHome();
-        }}
-      >
-        Sign in
-      </Button>
-      <Text style={styles.text}>Don't you have an account yet? Sign in</Text>
-    </View>
-  );
+     return (
+          <>
+               <View style={styles.container}>
+                    <Text variant="displayMedium">Sign in to your account</Text>
+                    <TextInput
+                         style={styles.textbox}
+                         mode="flat"
+                         placeholder="Email*"
+                    ></TextInput>
+                    <TextInput
+                         style={styles.textbox}
+                         placeholder="Password*"
+                         secureTextEntry={true}
+                    ></TextInput>
+                    <Button
+                         style={styles.button}
+                         mode="contained"
+                         onPress={() => {
+                              goToHome();
+                         }}
+                    >
+                         Sign in
+                    </Button>
+                    <View style={styles.linkContainer}>
+                         <Text style={styles.text}>Don't you have an account yet?</Text>
+                         <Button onPress={goToRegister} style={styles.linkBtn}>Sign up</Button>
+                    </View>
+               </View>
+          </>
+     );
 }
