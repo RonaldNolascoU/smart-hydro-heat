@@ -8,7 +8,7 @@ import { screen } from "../constant/screenName";
 const Tab = createBottomTabNavigator();
 // Barra de navegacion inferior
 export function AppNavigation() {
-  const inicioSesion = false;
+  const inicioSesion = true;
 
   return (
     <Tab.Navigator
@@ -19,13 +19,11 @@ export function AppNavigation() {
         tabBarIcon: ({ color, size }) => iconScreenOptions(route, color, size),
       })}
     >
-      {inicioSesion ? (
         <Tab.Screen
           name={screen.account.tab}
           component={AccountStack}
           options={{ title: "Cuenta" }}
         />
-      ) : (
         <>
           {tabScreen.map((scr, index) => (
             <Tab.Screen
@@ -36,7 +34,6 @@ export function AppNavigation() {
             />
           ))}
         </>
-      )}
     </Tab.Navigator>
   );
 }

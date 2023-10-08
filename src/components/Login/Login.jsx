@@ -36,7 +36,7 @@ export function Login() {
   };
 
   const goToHome = () => {
-    navigation.navigate(screen.home.home);
+    navigation.navigate(screen.home.home, { screen: screen.home.home });
   };
 
   const goToRegister = () => {
