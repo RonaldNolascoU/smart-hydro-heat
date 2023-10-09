@@ -16,7 +16,8 @@ export const styles = StyleSheet.create({
      },
      button: {
           marginTop: '10%',
-          width: '85%'
+          width: '85%',
+          marginBottom:'2%',
      },
      linkContainer: {
           marginTop: '5%',
@@ -32,5 +33,9 @@ export const styles = StyleSheet.create({
      linkBtn: {
           margin: 0,
           padding: 0,
-     }
+     },
+     googleButton:{
+        marginTop:'2%',
+        width:'85%',
+    },
 })

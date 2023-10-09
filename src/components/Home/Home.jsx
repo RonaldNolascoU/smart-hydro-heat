@@ -10,7 +10,6 @@ const bannerImage = require('../../../assets/images/banner-home1.png');
 function LeftContent() {
   return <Avatar.Icon size={22} icon="lightbulb-on-outline" />;
 }
-
 export function Home() {
   const navigation = useNavigation();
 
@@ -21,7 +20,10 @@ export function Home() {
   return (
     <ScrollView vertical showsVerticalScrollIndicator={false}>
       <Card style={styles.cardContainer}>
-        <Card.Cover style={styles.cardImage} source={bannerImage} />
+        <Card.Cover
+          style={styles.cardImage}
+          source={bannerImage}
+        />
         <Card.Content>
           <Text variant="bodyMedium">State</Text>
           <DataTable>

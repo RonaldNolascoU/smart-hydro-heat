@@ -1,7 +1,7 @@
 const homeStack = {
   tab: "HomeTab",
-  home: "Home", //nombre para regresar a la pantalla
-  temperature: "Temperature", //nombre para ir a la pantalla TemperatureControlScreen
+  home: "Home", // nombre para regresar a la pantalla
+  temperature: "Temperature", // nombre para ir a la pantalla TemperatureControlScreen
 };
 const staticsStack = {
   tab: "StaticsTab",

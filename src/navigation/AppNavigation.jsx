@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { tabScreen } from '../constant/tabScreen';
 import { iconScreenOptions } from '../utils';
 import { AccountStack } from './AccountStack';
 import { screen } from '../constant/screenName';
-import { saveLoggedin } from '../store/generalReducer';
 
 const Tab = createBottomTabNavigator();
 // Barra de navegacion inferior
@@ -27,8 +26,9 @@ export function AppNavigation() {
           component={AccountStack}
           options={{ title: 'Cuenta' }}
         />
-      ) : (
-        <>
+      ) 
+      :
+        (<>
           {tabScreen.map((scr, index) => (
             <Tab.Screen
               key={`tab-${index}`}
@@ -37,8 +37,7 @@ export function AppNavigation() {
               options={scr.options}
             />
           ))}
-        </>
-      )}
+        </>)}
     </Tab.Navigator>
   );
 }

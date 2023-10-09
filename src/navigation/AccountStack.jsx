@@ -16,19 +16,19 @@ export function AccountStack() {
                }}
           >
                <Stack.Screen
-                    name={screen.account.login} //Es el nombre que se va a usar para navegar
-                    component={LoginScreen} //Es el componente que se va a renderizar
-                    options={{ title: "Iniciar sesión", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+                    name={screen.account.login} // Es el nombre que se va a usar para navegar
+                    component={LoginScreen} // Es el componente que se va a renderizar
+                    options={{ title: "Iniciar sesión", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
                />
                <Stack.Screen
-                    name={screen.account.register} //Es el nombre que se va a usar para navegar
-                    component={RegisterScreen} //Es el componente que se va a renderizar
-                    options={{ title: "Registro", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+                    name={screen.account.register} // Es el nombre que se va a usar para navegar
+                    component={RegisterScreen} // Es el componente que se va a renderizar
+                    options={{ title: "Registro", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
                />
                <Stack.Screen
-                    name={screen.account.account} //Es el nombre que se va a usar para navegar
-                    component={AccountScreen} //Es el componente que se va a renderizar
-                    options={{ title: "Cuenta", headerTitleAlign: "center" }} //Es el nombre que aparece en el header
+                    name={screen.account.account} // Es el nombre que se va a usar para navegar
+                    component={AccountScreen} // Es el componente que se va a renderizar
+                    options={{ title: "Cuenta", headerTitleAlign: "center" }} // Es el nombre que aparece en el header
                />
           </Stack.Navigator>
      );
