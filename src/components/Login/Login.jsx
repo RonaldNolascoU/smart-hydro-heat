@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
@@ -7,17 +7,21 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Toast from 'react-native-toast-message';
 import { styles } from "./Login.styles";
 import { screen } from "../../constant/screenName";
 import { saveLoggedin } from '../../store/generalReducer';
+import authService from "../../services/auth-service";
 
 
 export function Login() {
      const navigation = useNavigation();
      const dispatch = useDispatch();
-     const { loggedin } = useSelector(({ state }) => state);
+     const [form, setForm] = useState({
+       email: "",
+       password: "",
+     });
 
   const signIn = async () => {
     try {
@@ -46,6 +50,21 @@ export function Login() {
     }
   };
 
+  const onEmailAndPasswordLogin = async () => {
+    try {
+      console.log({form})
+      const response = await authService.login(form);
+      console.log({response})
+    } catch (error) {
+      console.log({error})
+      Toast.show({
+        type: 'error',
+        text1: `Error`,
+        text2: error?.message || 'Something went wrong',
+      })
+    }
+  }
+
   const goToHome = () => {
     dispatch(saveLoggedin(true));
     navigation.navigate(screen.home.tab, { screen: screen.home.home });
@@ -62,17 +81,20 @@ export function Login() {
           style={styles.textbox}
           mode="flat"
           placeholder="Email*"
+          onChangeText={(text) => setForm({ ...form, email: text?.toLowerCase() })}
          />
         <TextInput
           style={styles.textbox}
           placeholder="Password*"
           secureTextEntry
+          mode="flat"
+          onChangeText={(text) => setForm({ ...form, password: text })}
          />
         <Button
           style={styles.button}
           mode="contained"
           onPress={() => {
-            signIn();
+            onEmailAndPasswordLogin()
           }}
         >
           Sign in
