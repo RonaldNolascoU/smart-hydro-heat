@@ -37,7 +37,6 @@ export function Register() {
       if (response) {
         goToLogin();
       }
-      // goToLogin();
     } catch (error) {
       Toast.show({
         type: 'error',
