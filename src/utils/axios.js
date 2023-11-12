@@ -3,8 +3,8 @@ import axiosBase from 'axios';
 import { getTokens, setTokens } from './auth';
 
 const axios = axiosBase.create({
-  baseURL: 'http://10.0.2.2:3000/v1',
-  // baseURL: 'https://smart-hydro-heat-4c442b70ceaa.herokuapp.com/v1',
+  // baseURL: 'http://10.0.2.2:3000/v1',
+  baseURL: 'https://smart-hydro-heat-4c442b70ceaa.herokuapp.com/v1',
   timeout: 10000,
 });
 
