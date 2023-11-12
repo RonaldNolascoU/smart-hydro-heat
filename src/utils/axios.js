@@ -1,9 +1,10 @@
 // original version: https://gist.github.com/Godofbrowser/bf118322301af3fc334437c683887c5f
-import axiosBase from "axios";
-import { getTokens, setTokens } from "./auth";
+import axiosBase from 'axios';
+import { getTokens, setTokens } from './auth';
 
 const axios = axiosBase.create({
-  baseURL: "https://smart-hydro-heat-4c442b70ceaa.herokuapp.com/v1",
+  // baseURL: 'http://10.0.2.2:3000/v1',
+  baseURL: 'https://smart-hydro-heat-4c442b70ceaa.herokuapp.com/v1',
   timeout: 10000,
 });
 
@@ -50,7 +51,7 @@ axios.interceptors.response.use(
       const { refreshToken } = getTokens();
       return new Promise((resolve, reject) => {
         axios
-          .post("/refresh_token", { refreshToken })
+          .post('/refresh_token', { refreshToken })
           .then(({ data }) => {
             setTokens(data);
             axios.defaults.headers.access_token = data.access_token;
@@ -69,7 +70,7 @@ axios.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default axios;
