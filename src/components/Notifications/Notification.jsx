@@ -27,12 +27,12 @@ export function Notifications() {
   }, []);
   return (
     <ScrollView>
-      {notifications.map((notification, i) => (
+      {notifications.sort((notificationA, notificationB)=> new Date(notificationB.date).getTime() - new Date(notificationA.date).getTime()).map((notification, i) => (
         <View key={`notification-${i}`}>
           <View style={styles.notificationDateContainer}>
             <Text style={styles.notificationDate}>
-              {new Date().toISOString().split('T')[0] === notification.date ? 'Today  •  ' : ''}
-              {notification.date.split('-').reverse().join('-')}
+              {new Date().toISOString().split('T')[0] === new Date(notification.date).toISOString().split('T')[0] ? 'Today  •  ' : ''}
+              {new Date(notification.date).toISOString().split('T')[0]}
             </Text>
           </View>
           <View style={styles.container}>
