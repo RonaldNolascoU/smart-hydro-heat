@@ -1,10 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Statistics } from "../components/Statistics/Statistics";
+
 
 export function StaticsScreen() {
   return (
-    <View>
-      <Text>Statics</Text>
-    </View>
+    <Statistics/>
   );
 }
