@@ -30,7 +30,7 @@ export function Notifications() {
                          </View>
                          <View style={styles.container}>
                               <View style={styles.hourContainer}>
-                                   <Text>{notification.hour}</Text>
+                                   <Text>{notification.time}</Text>
                               </View>
                               <View style={styles.notificationDesc}>
                                    <Text style={styles.title}>{notification.title}</Text>
