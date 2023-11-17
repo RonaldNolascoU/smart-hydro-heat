@@ -16,10 +16,11 @@ export function Alarms() {
         <>
             <View style={styles.container}>
                 <ScrollView style={styles.scrollViewContent}>
-                    {testAlarms.map((data) => (
+                    {testAlarms.map((data,i) => (
+                        <View key={i}>
                         <Card style={styles.cardContainer}>
                             <DataTable>
-                                <DataTable.Row onPress={() => { console.log("me has presionado " + [data.id]) }}>
+                                <DataTable.Row onPress={() => { console.log("me has presionado " + i) }}>
                                     <DataTable.Cell >{data.hour}</DataTable.Cell>
                                     <DataTable.Cell >|</DataTable.Cell>
                                     <DataTable.Cell style={styles.titleText}>
@@ -29,6 +30,7 @@ export function Alarms() {
                                 </DataTable.Row>
                             </DataTable>
                         </Card>
+                        </View>
                     ))}
                     <IconButton
                         icon="alarm-plus"
